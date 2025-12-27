@@ -9,7 +9,8 @@ A web-based study planner with progress tracking, XP system, streaks, and brain-
 - Sudoku brain game
 - Streak tracking
 - Mobile-friendly UI (PWA ready)
-- 📊 Dashboard
+
+-📊 Dashboard
 
 Study streak
 
