@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 Streak Celebration</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="progress-bg">
+
+<div class="card glass" style="text-align:center;">
+  <h1>🔥 Amazing Consistency!</h1>
+  <h2 id="streakText"></h2>
+
+  <p id="message"></p>
+
+  <button onclick="window.location.href='index.php'">
+    Back to Dashboard
+  </button>
+</div>
+
+<script>
+  const streak = localStorage.getItem("streak") || 0;
+
+  const messages = [
+    "Consistency beats motivation 💪",
+    "Habits build success 🧠",
+    "You're becoming unstoppable 🚀",
+    "Focus is now your superpower ⚡"
+  ];
+
+  document.getElementById("streakText").innerText =
+    `You completed a ${streak}-day streak!`;
+
+  document.getElementById("message").innerText =
+    messages[Math.floor(Math.random() * messages.length)];
+</script>
+
+</body>
+</html>

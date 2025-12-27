@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Progress | FocusFlow</title>
+
+  <!-- Mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="progress-bg">
+
+<header>📈 Your Study Progress</header>
+
+<nav>
+  <a href="index.php">Dashboard</a>
+  <a href="timetable.html">Timetable</a>
+</nav>
+
+<!-- SUMMARY -->
+<div class="card">
+  <h3>📊 Overall Summary</h3>
+  <p>Planned: <span id="total">0</span></p>
+  <p>Completed: <span id="completed">0</span></p>
+  <p>🔥 Streak: <span id="progressStreak">0</span> days</p>
+  <p>Mood: <span id="lastMood">Not set</span></p>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <p id="progressText">0% completed</p>
+</div>
+
+<!-- LEVEL -->
+<div class="card">
+  <h3>🎮 Your Level</h3>
+  <p id="userLevel">Level 1 — Beginner</p>
+
+  <div class="xp-bar-container">
+    <div class="xp-bar" id="xpBar"></div>
+  </div>
+  <p id="xpText">XP: 0 / 50</p>
+</div>
+
+<!-- SUDOKU -->
+<div class="card">
+  <h3>🧠 Brain Boost Game (4×4 Sudoku)</h3>
+  <p>Fill numbers 1–4 (multiple answers allowed)</p>
+
+  <div id="sudokuGrid" class="sudoku-grid"></div>
+
+  <button onclick="checkSudoku()">✔ Check</button>
+  <button onclick="newSudoku()">🔄 New Puzzle</button>
+
+  <p id="sudokuMsg"></p>
+</div>
+
+<script src="js/progress.js"></script>
+</body>
+</html>

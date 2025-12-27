@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Timetable</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="timetable-bg">
+
+<header>📅 Study Timetable</header>
+
+<nav>
+  <a href="index.php">Dashboard</a>
+  <a href="goals.html">Goals</a>
+  <a href="progress.html">Progress</a>
+</nav>
+
+<div class="card">
+
+  <input type="text" id="subject" placeholder="Subject Name">
+
+  <label>From</label>
+  <input type="time" id="fromTime">
+
+  <label>To</label>
+  <input type="time" id="toTime">
+
+  <label>Focus Mode</label>
+  <select id="mode">
+    <option value="Normal">Normal</option>
+    <option value="Focus">Focus</option>
+    <option value="Deep Focus">Deep Focus</option>
+  </select>
+
+  <button onclick="addSubject()">Add Subject</button>
+  <button class="danger" onclick="clearAll()">Clear All</button>
+  <button onclick="undoClear()">Undo</button>
+
+  <div class="stats">
+    <p>Total Subjects: <span id="totalSubjects">0</span></p>
+    <p>Total Slots: <span id="totalSlots">0</span></p>
+  </div>
+
+  <ul id="timetableList"></ul>
+
+</div>
+<script src="js/streak.js"></script>
+<script src="js/timetable.js"></script>
+
+
+</body>
+</html>

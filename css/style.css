@@ -1,0 +1,1032 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* DEFAULT BODY */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* DASHBOARD BACKGROUND */
+body.dashboard-bg {
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("../dash.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* TIMETABLE BACKGROUND */
+body.timetable-bg {
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../study-timetable.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* GOALS PAGE BACKGROUND */
+body.goals-bg {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../goal.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.goals-bg .card {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* ===============================
+   ✅ PROGRESS PAGE BACKGROUND
+================================ */
+body.progress-bg {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../progress.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  text-align: center;
+  padding: 18px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* NAV */
+nav {
+  margin: 18px 0;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9);
+  color: #2b7a78;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background: #2b7a78;
+  color: #ffffff;
+}
+
+/* CARD */
+.card {
+  width: 380px;
+  padding: 24px;
+  margin: 15px auto;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+}
+
+/* PROGRESS PAGE CARD ENHANCEMENT */
+body.progress-bg .card {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+/* Highlight values */
+body.progress-bg .card span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #3aafa9;
+}
+
+/* Motivation text */
+body.progress-bg .card::after {
+  content: "Small progress every day builds big success 💪";
+  display: block;
+  margin-top: 18px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+/* INPUTS */
+.card input,
+.card select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 14px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+button:not(.danger) {
+  background: linear-gradient(to right, #3aafa9, #2b7a78);
+  color: #ffffff;
+}
+
+button.danger {
+  background: linear-gradient(to right, #e76f51, #c0392b);
+  color: #ffffff;
+}
+/* ===============================
+   PROGRESS BAR STYLES
+================================ */
+.progress-container {
+  width: 100%;
+  height: 14px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #3aafa9, #2b7a78);
+  transition: width 0.6s ease;
+}
+
+.progress-text {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+/* ===============================
+   DASHBOARD-STYLE LAYOUT FEEL
+================================ */
+
+/* Center content like a dashboard canvas */
+body.progress-bg {
+  padding-bottom: 40px;
+}
+
+/* Make card feel like a dashboard widget */
+body.progress-bg .card {
+  width: 520px;
+  padding: 28px 30px;
+  margin-top: 30px;
+  border-radius: 22px;
+  background: rgba(20, 20, 20, 0.72);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  text-align: left;
+}
+
+/* Align text like analytics cards */
+body.progress-bg .card p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+/* Emphasize values (analytics style) */
+body.progress-bg .card span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #6ee7b7; /* soft mint */
+}
+
+/* ===============================
+   PROGRESS BAR – DASHBOARD STYLE
+================================ */
+
+.progress-container {
+  height: 16px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  margin-top: 18px;
+  overflow: hidden;
+}
+
+/* Smooth, clean analytics bar */
+.progress-bar {
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    #34d399,
+    #22c55e
+  );
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+}
+
+/* Progress text – subtle dashboard caption */
+.progress-text {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  text-align: right;
+  letter-spacing: 0.3px;
+}
+
+/* ===============================
+   SOFT DASHBOARD DEPTH
+================================ */
+
+/* Add visual depth behind card */
+body.progress-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right,
+      rgba(255,255,255,0.08),
+      transparent 45%);
+  pointer-events: none;
+}
+/* ===============================
+   🔥 STREAK BADGE
+================================ */
+.streak-badge {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 165, 0, 0.15);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===============================
+   🧠 INSIGHT BOX
+================================ */
+.insight-box {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12);
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* ===============================
+   📊 MINI CHART
+================================ */
+canvas {
+  margin-top: 18px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 6px;
+}
+/* ===============================
+   WEEKLY CHART
+================================ */
+.chart-title {
+  margin-top: 18px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.weekly-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+  margin-top: 12px;
+}
+
+.bar {
+  width: 16px;
+  background: linear-gradient(to top, #3aafa9, #2b7a78);
+  border-radius: 6px;
+  transition: height 0.4s ease;
+}
+
+.week-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  margin-top: 6px;
+  opacity: 0.85;
+}
+
+.insight {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+.auth-bg {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  display: flex;
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 12px;
+  gap: 40px;
+  color: white;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+.auth-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-box input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.auth-box button {
+  padding: 10px;
+  background: #14b8a6;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.top-welcome {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/* ===============================
+   🔷 TOP LEFT BRAND (FIXED)
+================================ */
+
+body {
+  position: relative; /* ensures absolute works correctly */
+}
+
+.top-welcome {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,0,0,0.55);
+  padding: 8px 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+/* Small logo like website brand */
+.logo-small {
+  width: 38px;
+  height: auto;
+}
+
+/* Compact brand text */
+.top-welcome h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.top-welcome .slogan {
+  font-size: 0.7rem;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.top-welcome strong {
+  font-size: 0.75rem;
+  color: #6ee7b7;
+}
+/* ===============================
+   🔷 TOP LEFT BRANDING (FINAL)
+================================ */
+
+body {
+  position: relative;
+}
+
+/* Brand container */
+.top-brand {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,0,0,0.55);
+  padding: 10px 14px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+/* Logo size FIX */
+.brand-logo {
+  width: 42px;   /* 🔥 perfect logo size */
+  height: auto;
+}
+
+/* Brand text */
+.brand-text h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+.brand-text span {
+  font-size: 0.7rem;
+  color: #6ee7b7;
+}
+
+/* Logout button */
+.logout-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 8px 14px;
+  background: linear-gradient(to right, #ef4444, #dc2626);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+/* =========================
+   DASHBOARD BACKGROUND
+========================= */
+.dashboard-bg {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url("dash.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* =========================
+   TOP TITLE
+========================= */
+.app-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* =========================
+   NAV PILLS
+========================= */
+.pill-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.pill-nav a {
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.85);
+  color: #0f766e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pill-nav a.active {
+  background: #0f766e;
+  color: white;
+}
+
+/* =========================
+   DASHBOARD CENTER
+========================= */
+.dashboard-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+.card.glass {
+  width: 320px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.primary-btn {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 12px;
+  background: #0f766e;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.sound-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  background: #14b8a6;
+  border: none;
+  color: white;
+}
+
+.stop-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  background: #ef4444;
+  border: none;
+  color: white;
+}
+
+/* =========================
+   LOGOUT
+========================= */
+.logout-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #ef4444;
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+/* ===============================
+   🔷 TOP LEFT BRAND
+================================ */
+.top-left-brand {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,0,0,0.55);
+  padding: 8px 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.logo-small {
+  width: 40px;
+  height: auto;
+}
+
+.brand-info h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.brand-info p {
+  margin: 0;
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+.brand-info span {
+  font-size: 0.75rem;
+  color: #6ee7b7;
+}
+
+/* ===============================
+   CENTER TITLE
+================================ */
+.center-title {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+/* ===== BADGES ===== */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+}
+
+.badge {
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  background: rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.badge.locked {
+  opacity: 0.4;
+  filter: grayscale(100%);
+}
+
+.badge.unlocked {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(52, 211, 153, 0.6);
+  animation: glow 1.2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 8px rgba(52, 211, 153, 0.4); }
+  to { box-shadow: 0 0 18px rgba(52, 211, 153, 0.9); }
+}
+
+/* ===== POPUP ===== */
+.badge-popup {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
+}
+
+.badge-popup-content {
+  background: #111;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes badgePop {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.badge-item {
+  animation: badgePop 0.6s ease-out;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 6px 0;
+}
+
+.badge-locked {
+  opacity: 0.4;
+  padding: 8px 12px;
+  margin: 6px 0;
+}
+
+@keyframes badgePop {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.xp-bar-container {
+  width: 100%;
+  height: 12px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.xp-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00ffd5, #00c3ff);
+  transition: width 0.5s ease;
+}
+
+.xp-text {
+  font-size: 13px;
+  opacity: 0.85;
+}
+.badge-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:10px;
+}
+
+.badge {
+  padding:10px;
+  border-radius:12px;
+  background:#34d399;
+  text-align:center;
+  font-size:0.8rem;
+}
+
+.badge.locked {
+  background:rgba(255,255,255,0.15);
+}
+
+.xp-bar-container {
+  height:10px;
+  background:#1f2937;
+  border-radius:10px;
+  overflow:hidden;
+  margin:8px 0;
+}
+
+.xp-bar {
+  height:100%;
+  background:#22c55e;
+}
+
+.puzzle-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin:15px 0;
+}
+
+.puzzle-tile {
+  padding:18px;
+  background:rgba(255,255,255,0.2);
+  text-align:center;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+.puzzle-tile:hover {
+  background:#34d399;
+  color:#000;
+}
+
+.small-text {
+  font-size:0.75rem;
+}
+
+.puzzle-msg {
+  margin-top:8px;
+  text-align:center;
+}
+/* Sudoku cells */
+.sudoku-cell {
+  background-color: #f0f0f0; /* light gray for editable cells */
+  color: #000;               /* black text for high contrast */
+  font-weight: bold;          /* make numbers stand out */
+  text-align: center;
+  font-size: 1.2em;           /* bigger numbers */
+  border: 1px solid #999;     /* subtle border to separate cells */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.sudoku-cell:focus {
+  outline: 2px solid #4CAF50; /* highlight selected cell */
+  background-color: #fff;     /* white when editing */
+}
+.card {
+  background: rgba(0,0,0,0.65);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 15px auto;
+  width: 320px;
+  color: white;
+}
+
+.progress-container,
+.xp-bar-container {
+  background: #333;
+  height: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.progress-bar,
+.xp-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg,#00f5a0,#00c3ff);
+  border-radius: 10px;
+  transition: width 0.4s;
+}
+
+/* Sudoku */
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.sudoku-grid input {
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.sudoku-grid input.fixed {
+  background: #111;
+  color: #00f5a0;
+  font-weight: bold;
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+  }
+
+  header {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 12px 0;
+    padding: 15px;
+  }
+
+  /* Progress bars */
+  .progress-container,
+  .xp-bar-container {
+    height: 12px;
+  }
+
+  /* Sudoku */
+  .sudoku-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .sudoku-grid input {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 15px;
+  }
+
+  p, small {
+    font-size: 14px;
+  }
+}
+/* =========================
+   MOBILE SAFE FIXES (ADD ONLY)
+========================= */
+
+/* Preserve original background */
+body.progress-bg {
+  min-height: 100vh;
+  padding: 12px;
+  color: #ffffff;
+}
+
+/* Fix logo size (VERY IMPORTANT) */
+.logo,
+.logo img,
+.logo-small {
+  width: 42px;
+  height: auto;
+  max-width: 42px;
+}
+
+/* Prevent cards from overflowing on mobile */
+.card {
+  max-width: 360px;
+  margin: 14px auto;
+}
+
+/* Mobile friendly text */
+.card p,
+.card span {
+  font-size: 0.95rem;
+}
+
+/* Progress + XP bars */
+.progress-container,
+.xp-bar-container {
+  width: 100%;
+  height: 12px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.progress-bar,
+.xp-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00f5a0, #00c3ff);
+  transition: width 0.4s ease;
+}
+
+/* =========================
+   SUDOKU (MOBILE FRIENDLY)
+========================= */
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.sudoku-grid input {
+  height: 44px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+}
+
+.sudoku-grid input.fixed {
+  background: rgba(0,0,0,0.5);
+  color: #00f5a0;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   TABLET & DESKTOP
+========================= */
+@media (min-width: 768px) {
+  .card {
+    max-width: 480px;
+  }
+}

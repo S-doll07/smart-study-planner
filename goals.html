@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Goals</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="
+  min-height:100vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('goal.jpg') no-repeat center center fixed;
+  background-size: cover;
+">
+
+<header>🎯 Study Methods</header>
+
+<nav>
+  <a href="index.php">Dashboard</a>
+  <a href="timetable.html">Timetable</a>
+  <a href="progress.html">Progress</a>
+</nav>
+
+
+<div class="card">
+  <h3>⏱ Focus Mode (Pomodoro)</h3>
+  <p id="timer">25:00</p>
+  <button onclick="startFocus()">Start Focus</button>
+  <button class="danger" onclick="stopFocus()">Stop</button>
+</div>
+
+
+<div class="card">
+  <h3>🎵 Study Soundscape</h3>
+  <button onclick="playSound('forest')">Forest</button>
+  <button onclick="playSound('rain')">Rain</button>
+  <button onclick="playSound('noise')">White Noise</button>
+  <button class="danger" onclick="stopSound()">Stop</button>
+</div>
+
+
+
+<div class="card">
+  <h3>😊 Mood Tracker</h3>
+  <select id="mood">
+    <option>Happy</option>
+    <option>Normal</option>
+    <option>Tired</option>
+    <option>Stressed</option>
+  </select>
+  <button onclick="saveMood()">Save Mood</button>
+</div>
+
+<script src="js/soundscape.js"></script>
+<script src="js/focus.js"></script>
+<script src="js/streak.js"></script>
+<script src="js/mood.js"></script>
+
+</body>
+</html>
